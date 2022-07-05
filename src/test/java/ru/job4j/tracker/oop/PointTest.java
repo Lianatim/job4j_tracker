@@ -34,7 +34,7 @@ public class PointTest {
     }
 
     @Test
-    public void when11to21to16then2() {
+    public void when11to21to16then1() {
         double expected = 1;
         Point firstArg = new Point(1, 1);
         Point secondArg = new Point(2, 1);
