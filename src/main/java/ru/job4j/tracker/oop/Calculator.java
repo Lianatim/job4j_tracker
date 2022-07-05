@@ -24,11 +24,10 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        sum(5);
-        minus(6);
-        Calculator div = new Calculator();
-        Calculator sumAll = new Calculator();
-        div.divide(4);
-        sumAll.sumAllOperation(4);
+        Calculator calculations = new Calculator();
+        System.out.println(sum(5));
+        System.out.println(minus(6));
+        System.out.println(calculations.divide(4));
+        System.out.println(calculations.sumAllOperation(4));
     }
 }
