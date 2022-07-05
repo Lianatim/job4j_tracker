@@ -1,9 +1,9 @@
-package ru.job4j.tracker.oop;
+package ru.job4j.tracker;
 
 public class Error {
-    boolean active;
-    int status;
-    String message;
+    private boolean active;
+    private int status;
+    private String message;
 
     public Error() {
     }
@@ -15,7 +15,7 @@ public class Error {
     }
 
     public void print() {
-        System.out.println("Наличие ошибки: " + active + "\nСтатус: " + status + "\nТекст ошибки: " + message + "\n");
+        System.out.println("Наличие ошибки: " + active + System.lineSeparator() + "Статус: " + status + System.lineSeparator() + "Текст ошибки: " + message + System.lineSeparator());
     }
 
     public static void main(String[] args) {
