@@ -23,4 +23,24 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+    @Test
+    public void when42to22to66then2() {
+        double expected = 2;
+        Point firstArg = new Point(4, 2);
+        Point secondArg = new Point(2, 2);
+        Point thirdArg = new Point(6, 6);
+        double out = firstArg.distance(secondArg);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when11to21to16then2() {
+        double expected = 1;
+        Point firstArg = new Point(1, 1);
+        Point secondArg = new Point(2, 1);
+        Point thirdArg = new Point(1, 6);
+        double out = firstArg.distance(secondArg);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
 }
