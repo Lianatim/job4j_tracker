@@ -1,0 +1,41 @@
+package ru.job4j.tracker.oop;
+
+import ru.job4j.tracker.oop.Point;
+
+public class Triangle {
+    private Point first;
+    private Point second;
+    private Point third;
+
+    public Triangle(Point ap, Point bp, Point cp) {
+        this.first = ap;
+        this.second = bp;
+        this.third = cp;
+    }
+
+    public double semiPerimeter(double a, double b, double c) { //полупериметр
+        return (a + b + c) / 2;
+    }
+
+    public boolean exist(double ab, double ac, double bc) { //проверяет возможно ли из сторон с длинами a, b и c построить треугольник.
+        boolean rsl = false;
+        if ((ab + ac) > bc && (ab + bc) > ac && (bc + ac) > ab) {
+            rsl = true;
+        }
+        return rsl;
+    }
+
+    public double area() {
+        double rsl = -1;
+        double ab = first.distance(second);
+        double ac = first.distance(third);
+        double bc = second.distance(third);
+        if (this.exist(ab, ac, bc)) {
+            double p = semiPerimeter(ab, ac, bc);
+            /* написать формулу для расчета площади треугольника. */
+            double s = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
+            rsl = s;
+        }
+        return rsl;
+    }
+}
