@@ -17,7 +17,7 @@ public class Triangle {
         return (a + b + c) / 2;
     }
 
-    public boolean exist(double ab, double ac, double bc) { //проверяет возможно ли из сторон с длинами a, b и c построить треугольник.
+    public boolean exist(double ab, double ac, double bc) {
         boolean rsl = false;
         if ((ab + ac) > bc && (ab + bc) > ac && (bc + ac) > ab) {
             rsl = true;
@@ -32,7 +32,6 @@ public class Triangle {
         double bc = second.distance(third);
         if (this.exist(ab, ac, bc)) {
             double p = semiPerimeter(ab, ac, bc);
-            /* написать формулу для расчета площади треугольника. */
             double s = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
             rsl = s;
         }
