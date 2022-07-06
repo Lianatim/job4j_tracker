@@ -1,7 +1,5 @@
 package ru.job4j.tracker.oop;
 
-import ru.job4j.tracker.oop.Point;
-
 public class Triangle {
     private Point first;
     private Point second;
@@ -18,11 +16,7 @@ public class Triangle {
     }
 
     public boolean exist(double ab, double ac, double bc) {
-        boolean rsl = false;
-        if ((ab + ac) > bc && (ab + bc) > ac && (bc + ac) > ab) {
-            rsl = true;
-        }
-        return rsl;
+        return (ab + ac) > bc && (ab + bc) > ac && (bc + ac) > ab;
     }
 
     public double area() {
