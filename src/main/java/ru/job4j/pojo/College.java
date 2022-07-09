@@ -14,3 +14,4 @@ public class College {
                 + student.getGroup() + ", entered " + student.getDateReceipt().format(formatter)));
     }
 }
+
