@@ -59,6 +59,8 @@ public class StartUI {
             for (Item item : items) {
                 System.out.println(item);
             }
+        } else {
+            System.out.println("Заявки с именем: " + name + " не найдены.");
         }
     }
 
