@@ -1,4 +1,4 @@
-package ex;
+package ru.job4j.ex;
 
 public class FindMaxLenght {
     public static void main(String[] args) {
