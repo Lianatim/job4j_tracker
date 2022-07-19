@@ -191,4 +191,50 @@ public class StartUITest {
                 )
         );
     }
+
+    @Test
+    public void whenInvalidInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"one", "2"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(2));
+    }
+
+    @Test
+    public void validInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+    }
+
+    @Test
+    public void whenRepeatedValidInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1", "2"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selectedOne = input.askInt("Enter menu:");
+        int selectedTwo = input.askInt("Enter menu:");
+        assertThat(selectedOne, is(1));
+        assertThat(selectedTwo, is(2));
+    }
+
+    @Test
+    public void whenNegativeInvalidInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"-1"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selectedOne = input.askInt("Enter menu:");
+        assertThat(selectedOne, is(-1));
+    }
 }
