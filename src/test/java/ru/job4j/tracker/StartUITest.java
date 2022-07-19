@@ -196,7 +196,7 @@ public class StartUITest {
     public void whenInvalidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"one", "2"}
+                new String[]{"one", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
@@ -207,7 +207,7 @@ public class StartUITest {
     public void validInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1"}
+                new String[]{"1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
@@ -218,7 +218,7 @@ public class StartUITest {
     public void whenRepeatedValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "2"}
+                new String[]{"1", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selectedOne = input.askInt("Enter menu:");
@@ -231,7 +231,7 @@ public class StartUITest {
     public void whenNegativeInvalidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"-1"}
+                new String[]{"-1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selectedOne = input.askInt("Enter menu:");
